@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Data
@@ -27,6 +28,9 @@ public class Person {
 
     @OneToOne
     private XUser user;
+
+    @ManyToOne
+    private Group group;
 
     public Person(String name, String firstname, String mail, String adress, String birthday, XUser user) {
         this.name = name;
