@@ -42,6 +42,10 @@ public class Person {
         this.user = user;
     }
 
+    public Person() {
+
+    }
+
 
     public void setBirthday(String birthday) throws ParseException {
         try{
