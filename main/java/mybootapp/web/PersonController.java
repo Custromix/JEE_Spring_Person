@@ -20,11 +20,7 @@ public class PersonController {
     @Autowired
     PersonRepository repo;
 
-    @PostConstruct
-    public void init() {
-        //repo.save(new Person("kilyan","chapuis","test@test.com"));
 
-    }
 
     @RequestMapping("/list")
     public ModelAndView listPersons() {
@@ -45,7 +41,7 @@ public class PersonController {
 	}
     @RequestMapping("/EqualUser")
     public ModelAndView EqualUser(XUser user) {
-        session
+
         final var result = repo.findByUserLike(user);
         return new ModelAndView("person", "found", result);
     }

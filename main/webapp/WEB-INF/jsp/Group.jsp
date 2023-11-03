@@ -1,3 +1,4 @@
+<%@ include file="/WEB-INF/jsp/header.jsp"%>
 <%--
   Created by IntelliJ IDEA.
   User: Retr0
@@ -12,15 +13,15 @@
 </head>
 <body>
 
-<form method="post" action="/group/add">
+<form method="post" action="/Group/add">
 
     <input type="text" placeholder="Name" name="name"/>
     <select name="person" id="">
         <option value="">Choisissez une personne</option>
         <c:forEach items="${persons}" var="person">
+            <option value="${person.id}">${person.name}</option>
+            <c:if test = "${person.groupe == null}">
 
-            <c:if test = "${person.group != null}">
-                <option value="${person.id}">${person.name}</option>
             </c:if>
 
         </c:forEach>
@@ -38,3 +39,4 @@
 
 </body>
 </html>
+<%@ include file="/WEB-INF/jsp/footer.jsp"%>

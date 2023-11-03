@@ -25,12 +25,6 @@ public class CourseControler {
 	@Autowired
 	CourseRepository repo;
 
-	@PostConstruct
-	public void init() {
-		repo.save(new Course("Architecture JEE"));
-		repo.save(new Course("Données post-relationnelles"));
-	}
-
 	@RequestMapping("/list")
 	public ModelAndView listCourses() {
 		return new ModelAndView("course", "courses", repo.findAll());

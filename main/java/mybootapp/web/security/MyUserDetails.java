@@ -23,14 +23,6 @@ public class MyUserDetails implements UserDetailsService {
     @Autowired
     PasswordEncoder encoder;
 
-    @PostConstruct
-    public void init() {
-        /*var aa = new XUser("aaa", encoder.encode("aaa"), Set.of("ADMIN", "USER"));
-        var bb = new XUser("bbb", encoder.encode("bbb"), Set.of("USER"));
-        userRepo.save(aa);
-        userRepo.save(bb);*/
-        System.out.println("--- INIT SPRING SECURITY");
-    }
 
 
 
