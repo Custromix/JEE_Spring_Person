@@ -30,7 +30,14 @@ public class GroupController {
         return new ModelAndView("Group", "persons", rappers.findAll());
 
     }
+    @RequestMapping("/list")
+    public ModelAndView getgroup() {
 
+
+        //mv.getModel().put("data", "Welcome home man");
+        return new ModelAndView("Group", "list", repo.findAll());
+
+    }
     @RequestMapping("/add")
     public String group(String name, Person person) {
         Groupe G = new Groupe(name);
