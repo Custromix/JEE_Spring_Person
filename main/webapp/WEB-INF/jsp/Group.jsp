@@ -7,11 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Add group</title>
-</head>
-<body>
+<c:url var="list" value="/course/list" />
 
 <form method="post" action="/Group/add">
 
@@ -33,10 +29,13 @@
 
 </form>
 
-<script>
-    addNewSelect
-</script>
+<div>
+    <c:forEach items="${list}" var="person">
+<tr>
+    <td>
+        <c:out value="${person.name}" />
+    </td>
 
-</body>
-</html>
+</tr></c:forEach></div>
+
 <%@ include file="/WEB-INF/jsp/footer.jsp"%>
