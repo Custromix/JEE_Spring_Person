@@ -25,8 +25,6 @@ public class GroupController {
     @GetMapping
     public ModelAndView getTestData() {
 
-
-        //mv.getModel().put("data", "Welcome home man");
         return new ModelAndView("group", "persons", rappers.findAll());
 
     }

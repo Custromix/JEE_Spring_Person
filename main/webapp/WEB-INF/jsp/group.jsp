@@ -32,8 +32,8 @@
                 <div class="accordion-body">
                     <ul class="list-group">
                         <c:forEach items="${group.persons}" var="person">
-                            <a href="/person/edit">
-                                <li class="list-group-item active" aria-current="true"><c:out value="${person.name}" /></li>
+                            <a href="#">
+                                <li class="list-group-item" aria-current="true"><c:out value="${person.name}" /></li>
                             </a>
                         </c:forEach>
                     </ul>
