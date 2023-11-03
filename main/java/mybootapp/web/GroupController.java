@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/Group")
+@RequestMapping("/group")
 public class GroupController {
 
 
@@ -27,15 +27,19 @@ public class GroupController {
 
 
         //mv.getModel().put("data", "Welcome home man");
-        return new ModelAndView("Group", "persons", rappers.findAll());
+        return new ModelAndView("group", "persons", rappers.findAll());
 
     }
     @RequestMapping("/list")
     public ModelAndView getgroup() {
+        var groups = repo.findAll();
+        for( var group : groups ) {
+            group.Addpers(rappers.findByGroupe(group));
+        }
 
-
+        int a = 2;
         //mv.getModel().put("data", "Welcome home man");
-        return new ModelAndView("Group", "list", repo.findAll());
+        return new ModelAndView("group", "groups", groups);
 
     }
     @RequestMapping("/add")
@@ -44,6 +48,6 @@ public class GroupController {
         G.Addpers(person);
 
         repo.save(G);
-        return "redirect:/Group";
+        return "redirect:/group";
     }
 }

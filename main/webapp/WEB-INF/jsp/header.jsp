@@ -13,8 +13,9 @@
 	<head>
 	<meta charset="UTF-8">
 	<title>Spring boot application</title>
-	<link rel="stylesheet" href="${bootstrap_css}">
-	<script src="${jquery_js}"></script>
-	<script src="${bootstrap_js}"></script>
+	<%--<link rel="stylesheet" href="${bootstrap_css}">--%>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<%--<script src="${jquery_js}"></script>
+	<script src="${bootstrap_js}"></script>--%>
 </head>
 <body>

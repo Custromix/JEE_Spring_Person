@@ -46,11 +46,6 @@ public class PersonController {
     private Person person;
 
 
-    @PostConstruct
-    public void init() {
-        //repo.save(new Person("kilyan","chapuis","test@test.com"));
-
-
     @RequestMapping("/list")
     public ModelAndView listPersons() {
         return new ModelAndView("person", "persons", repo.findAll());
