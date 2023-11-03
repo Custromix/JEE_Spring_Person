@@ -19,6 +19,9 @@
             <td>
                 <c:out value="${course.mail}" />
             </td>
+            <td>
+                <c:out value="${course.groupe.name}" />
+            </td>
         </tr>
     </c:forEach>
 </div>

@@ -15,13 +15,7 @@ public class CounterController {
         int value = 0;
     }
 
-    @RequestMapping(value = "/init")
-    @ResponseBody
-    public String init(HttpSession session) {
-        var counter = new CounterBean();
-        session.setAttribute("counter", counter);
-        return String.format("int counter = %d\n", counter.value);
-    }
+
 
     @RequestMapping(value = "/show")
     @ResponseBody

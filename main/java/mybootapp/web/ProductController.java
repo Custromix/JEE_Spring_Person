@@ -30,21 +30,7 @@ public class ProductController {
 
     protected final Log logger = LogFactory.getLog(getClass());
 
-    @PostConstruct
-    public void init() {
-        Product p1 = new Product();
-        p1.setName("Car");
-        p1.setPrice(2000.0);
-        p1.setDescription("Small car");
-        p1.setType("x");
-        Product p2 = new Product();
-        p2.setName("Gift");
-        p2.setPrice(100.0);
-        p2.setDescription("Big gift");
-        p2.setType("x");
-        repo.save(p1);
-        repo.save(p2);
-    }
+
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String listProducts() {

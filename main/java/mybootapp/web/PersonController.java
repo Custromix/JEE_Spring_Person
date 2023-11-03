@@ -50,7 +50,6 @@ public class PersonController {
     public void init() {
         //repo.save(new Person("kilyan","chapuis","test@test.com"));
 
-    }
 
     @RequestMapping("/list")
     public ModelAndView listPersons() {
@@ -69,6 +68,7 @@ public class PersonController {
 		final var result = repo.findByNameLike("%" + name + "%");
 		return new ModelAndView("person", "courses", result);
 	}
+    
     @GetMapping("/edit")
     public ModelAndView getEditPage(Principal principal) {
         var user = repoX.findById(principal.getName());
