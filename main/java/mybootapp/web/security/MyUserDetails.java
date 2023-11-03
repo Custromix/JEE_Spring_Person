@@ -25,10 +25,8 @@ public class MyUserDetails implements UserDetailsService {
 
     @PostConstruct
     public void init() {
-        /*var aa = new XUser("aaa", encoder.encode("aaa"), Set.of("ADMIN", "USER"));
-        var bb = new XUser("bbb", encoder.encode("bbb"), Set.of("USER"));
+        var aa = new XUser("root", encoder.encode("1234"), Set.of("ADMIN", "USER"));
         userRepo.save(aa);
-        userRepo.save(bb);*/
         System.out.println("--- INIT SPRING SECURITY");
     }
 

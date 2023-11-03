@@ -6,7 +6,7 @@
 
 
 <div class="container">
-	<h1>Courses</h1>
+	<h1>${sessionScope.id}</h1>
 	<form action="${findCourses}" method="post">
 		<p>
 			<a class="btn btn-info" href="${newCourse}">New course</a>

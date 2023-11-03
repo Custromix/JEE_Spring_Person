@@ -3,7 +3,13 @@
 <c:url var="list" value="/course/list" />
 
 <div class="container">
-    <h1>Courses</h1>
+
+    <c:forEach items="${person}" var="pers">
+        <h1>
+        ${pers}
+        </h1>
+    </c:forEach>
+
     <c:forEach items="${persons}" var="course">
         <tr>
             <td>${course.id}--</td>
