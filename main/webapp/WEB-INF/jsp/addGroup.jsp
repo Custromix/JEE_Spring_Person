@@ -15,7 +15,7 @@
 <form method="post" action="/group/add">
 
     <input type="text" placeholder="Name" name="name"/>
-    <select name="person" id="" onselect="addNewSelect()">
+    <select name="person" id="">
         <option value="">Choisissez une personne</option>
         <c:forEach items="${persons}" var="person">
 
@@ -25,11 +25,16 @@
 
         </c:forEach>
     </select>
+    <button class="btn btn-primary" type="button">+</button>
 
     <input type="submit" class="red submit" type="button">
 
 
 </form>
+
+<script>
+    addNewSelect
+</script>
 
 </body>
 </html>
