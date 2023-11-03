@@ -9,8 +9,9 @@
 	<h1>Courses</h1>
 	<form action="${findCourses}" method="post">
 		<p>
-			<a class="btn btn-info" href="${newCourse}">New course</a> <span
-				style="margin-left: 30px;"></span> <input name="name" size="10" />
+			<a class="btn btn-info" href="${newCourse}">New course</a>
+			<span style="margin-left: 30px;"></span>
+			<input name="name" size="10" />
 			<input class="btn btn-info" type="submit" value="Find" />
 		</p>
 	</form>
