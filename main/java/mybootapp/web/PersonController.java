@@ -1,6 +1,7 @@
 package mybootapp.web;
 
 import mybootapp.model.Person;
+import mybootapp.model.XUser;
 import mybootapp.repo.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,11 +37,16 @@ public class PersonController {
 		repo.save(course);
 		return "redirect:/course/list";
 	}
-
-	@RequestMapping("/find")
-	public ModelAndView findCourses(String name) {
-		final var result = repo.findByNameLike("%" + name + "%");
-		return new ModelAndView("course", "courses", result);
-	}
 */
+	@RequestMapping("/find")
+	public ModelAndView findPerson(String name) {
+		final var result = repo.findByNameLike("%" + name + "%");
+		return new ModelAndView("person", "courses", result);
+	}
+    @RequestMapping("/EqualUser")
+    public ModelAndView EqualUser(XUser user) {
+        session
+        final var result = repo.findByUserLike(user);
+        return new ModelAndView("person", "found", result);
+    }
 }
