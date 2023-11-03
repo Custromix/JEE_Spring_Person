@@ -99,6 +99,6 @@ public class PersonController {
 
         repo.save(person);
 
-        return "redirect:/edit";
+        return "redirect:/person/edit";
     }
 }
